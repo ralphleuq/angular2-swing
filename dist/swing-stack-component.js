@@ -26,6 +26,7 @@ var SwingStackComponent = (function () {
     };
     SwingStackComponent.prototype.ngAfterContentInit = function () {
         var _this = this;
+        console.log("xxxxxxxxxxxxxxxxxxx");
         this.stack = Swing.Stack(this.stackConfig || {});
         this.cards.forEach(function (c) { return _this.stack.createCard(c.getNativeElement(), c.prepend); });
         // Hook various events
