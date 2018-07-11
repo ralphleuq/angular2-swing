@@ -63,20 +63,20 @@ export class SwingStackComponent implements AfterContentInit {
     this.cards.forEach((c) => this.stack.createCard(c.getNativeElement(), c.prepend));
 
     // Hook various events
-    this.stack.on('throwout', $event => this.throwout.emit($event));
-    this.stack.on('throwoutend', $event => this.throwoutend.emit($event));
+    this.stack.on('throwout', $event => this.throwoutup.emit($event));
+    this.stack.on('throwoutend', $event => this.throwoutup.emit($event));
     this.stack.on('throwoutleft', $event => 
-				  {this.throwoutleft.emit($event); 
+				  {this.throwoutup.emit($event); 
 				  	console.log($event);
 				  }
 				 );
-    this.stack.on('throwoutright', $event => this.throwoutright.emit($event));
+    this.stack.on('throwoutright', $event => this.throwoutup.emit($event));
     this.stack.on('throwin', $event => this.throwin.emit($event));
-    this.stack.on('throwinend', $event => this.throwinend.emit($event));
+    this.stack.on('throwinend', $event => this.throwoutup.emit($event));
     this.stack.on('dragstart', $event => this.dragstart.emit($event));
     this.stack.on('dragmove', $event => this.dragmove.emit($event));
     this.stack.on('dragend', $event => this.dragend.emit($event));
     this.stack.on('throwoutup', $event => this.throwoutup.emit($event));
-    this.stack.on('throwoutdown', $event => this.throwoutdown.emit($event));
+    this.stack.on('throwoutdown', $event => this.throwoutup.emit($event));
   }
 }
