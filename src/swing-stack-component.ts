@@ -60,6 +60,11 @@ export class SwingStackComponent implements AfterContentInit {
 
   ngAfterContentInit() {
 	console.log("xxxxxxxxxxxxxxxxxxx");
+
+	let event = {
+
+    }
+
     this.stack = Swing.Stack(this.stackConfig || {});
     this.cards.forEach((c) => this.stack.createCard(c.getNativeElement(), c.prepend));
 
