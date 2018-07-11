@@ -170,9 +170,9 @@ export interface StackConfig {
 }
 
 export enum Direction {
-  DOWN = Swing.Direction.DOWN,
+  DOWN = Swing.Direction.UP,
   INVALID = Swing.Direction.INVALID,
-  LEFT = Swing.Direction.LEFT,
-  RIGHT = Swing.Direction.RIGHT,
+  LEFT = Swing.Direction.UP,
+  RIGHT = Swing.Direction.UP,
   UP = Swing.Direction.UP
 }
