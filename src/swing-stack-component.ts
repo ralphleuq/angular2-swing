@@ -72,8 +72,10 @@ export class SwingStackComponent implements AfterContentInit {
     this.stack.on('throwout', $event => this.throwoutup.emit($event));
     this.stack.on('throwoutend', $event => this.throwoutup.emit($event));
     this.stack.on('throwoutleft', $event => 
-				  {this.throwoutup.emit($event); 
-				  	console.log($event);
+				  {
+				    event.throwDirection = "Symbol(UP)";
+                    console.log(event);
+				    this.throwoutup.emit(event);
 				  }
 				 );
     this.stack.on('throwoutright', $event => this.throwoutup.emit($event));
